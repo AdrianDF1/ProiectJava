@@ -32,3 +32,61 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 0 2019-10-17 16:54:00.676
+!MESSAGE org.eclipse.recommenders:index::zip:0.0.0 could not be resolved from model repositories. Are you offline?
+
+!ENTRY org.eclipse.equinox.p2.discovery 4 0 2019-10-17 16:58:53.634
+!MESSAGE Failed to discover all connectors.
+!SUBENTRY 1 org.eclipse.equinox.p2.discovery 4 0 2019-10-17 16:58:53.634
+!MESSAGE RemoteBundleDiscoveryStrategy failed with an error
+!STACK 1
+org.eclipse.core.runtime.CoreException: IO failure: cannot load discovery directory
+	at org.eclipse.equinox.internal.p2.discovery.compatibility.RemoteBundleDiscoveryStrategy.performDiscovery(RemoteBundleDiscoveryStrategy.java:96)
+	at org.eclipse.equinox.internal.p2.discovery.Catalog.performDiscovery(Catalog.java:85)
+	at org.eclipse.equinox.internal.p2.ui.discovery.wizards.CatalogViewer$6.run(CatalogViewer.java:569)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: java.io.FileNotFoundException: http://download.eclipse.org/recommenders/discovery/2.0/directory.xml
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryStatusHelper.checkFileNotFound(RepositoryStatusHelper.java:302)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.checkException(FileInfoReader.java:223)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getRemoteFiles(FileInfoReader.java:115)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getRemoteFile(FileInfoReader.java:128)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getLastModified(FileInfoReader.java:133)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.getLastModified(RepositoryTransport.java:229)
+	at org.eclipse.equinox.internal.p2.discovery.compatibility.util.CacheManager.createCache(CacheManager.java:101)
+	at org.eclipse.equinox.internal.p2.discovery.compatibility.util.TransportUtil.readResource(TransportUtil.java:101)
+	at org.eclipse.equinox.internal.p2.discovery.compatibility.RemoteBundleDiscoveryStrategy.performDiscovery(RemoteBundleDiscoveryStrategy.java:81)
+	... 3 more
+!SUBENTRY 2 org.eclipse.equinox.p2.discovery 4 0 2019-10-17 16:58:53.637
+!MESSAGE IO failure: cannot load discovery directory
+!STACK 0
+java.io.FileNotFoundException: http://download.eclipse.org/recommenders/discovery/2.0/directory.xml
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryStatusHelper.checkFileNotFound(RepositoryStatusHelper.java:302)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.checkException(FileInfoReader.java:223)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getRemoteFiles(FileInfoReader.java:115)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getRemoteFile(FileInfoReader.java:128)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getLastModified(FileInfoReader.java:133)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.getLastModified(RepositoryTransport.java:229)
+	at org.eclipse.equinox.internal.p2.discovery.compatibility.util.CacheManager.createCache(CacheManager.java:101)
+	at org.eclipse.equinox.internal.p2.discovery.compatibility.util.TransportUtil.readResource(TransportUtil.java:101)
+	at org.eclipse.equinox.internal.p2.discovery.compatibility.RemoteBundleDiscoveryStrategy.performDiscovery(RemoteBundleDiscoveryStrategy.java:81)
+	at org.eclipse.equinox.internal.p2.discovery.Catalog.performDiscovery(Catalog.java:85)
+	at org.eclipse.equinox.internal.p2.ui.discovery.wizards.CatalogViewer$6.run(CatalogViewer.java:569)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2019-10-17 17:26:43.539
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Unknown javadoc format for String {key=Ljava/lang/String;} [in String.class [in java.lang [in C:\Program Files (x86)\Java\jre7\lib\rt.jar]]]]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:81)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:999)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:500)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:689)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:607)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:599)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:85)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2019-10-17 17:26:43.540
+!MESSAGE Unknown javadoc format for String {key=Ljava/lang/String;} [in String.class [in java.lang [in C:\Program Files (x86)\Java\jre7\lib\rt.jar]]]
